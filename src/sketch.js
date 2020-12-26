@@ -1,17 +1,26 @@
 import P5 from 'p5';
-import text from './utils/text';
+import { MatrixText } from './sketches/matrixText';
 import {
-  BACKGROUND_COLOR,
+  COLORS,
 } from './constants';
 
 const sketch = ( p5 ) => {
-
+  let matrixText;
+  
   p5.setup = () => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight);
+    matrixText = new MatrixText({
+      startPos: p5.createVector(0, 0),
+      numLines: p5.windowWidth / 13,
+      lineLength: p5.windowHeight / 13,
+    });
+
   };
 
   p5.draw = () => {
-    p5.background(BACKGROUND_COLOR);
+    p5.background(COLORS.BLACK);
+    matrixText.run(p5);
+    
   };
 
   p5.windowResized = () => {

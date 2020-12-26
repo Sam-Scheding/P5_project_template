@@ -1,6 +1,6 @@
-import text from '../utils/text';
-import math from '../utils/math';
-import { COLORS } from '../constants';
+import text from '../../utils/text';
+import math from '../../utils/math';
+import { COLORS } from '../../constants';
 
 // A simple Particle class
 let TextStream = function({pos, len}) {

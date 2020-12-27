@@ -1,5 +1,5 @@
 import P5 from 'p5';
-import { MatrixText } from './matrixText';
+import MatrixText from './matrixText';
 import {
   COLORS,
 } from '../../constants';
@@ -11,8 +11,6 @@ const sketch = ( p5 ) => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight);
     matrixText = new MatrixText({
       startPos: p5.createVector(0, 0),
-      numLines: p5.windowWidth / 13,
-      lineLength: p5.windowHeight / 13,
     });
 
   };

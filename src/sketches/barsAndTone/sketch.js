@@ -1,16 +1,20 @@
 import P5 from 'p5';
-import {
-  COLORS,
-} from '../../constants';
+import BarsAndTone from './barsAndTone';
 
 const sketch = ( p5 ) => {
+  let bat;
   
+  p5.preload = () => {
+    bat = new BarsAndTone(p5); // Preloads the image
+  }
+
   p5.setup = () => {
     p5.createCanvas(p5.windowWidth, p5.windowHeight);
+    p5.frameRate(24);
   };
 
   p5.draw = () => {
-    p5.background(COLORS.BLACK);    
+    bat.run(p5);
   };
 
   p5.windowResized = () => {

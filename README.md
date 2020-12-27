@@ -5,7 +5,7 @@
 
 ## Description
 
-This repository bundles a basic P5.js sketch with Parcel. This allows P5 to be installed via NPM, rather than referencing it in a script tag explicitly, and allows P5 sketches to use ES6 syntax, and be served with a hot reloader.
+A vanilla JS Node server that contains a various sketches I've created as well as common components to create new sketches.
 
 ## Installation
 
@@ -23,7 +23,7 @@ $ yarn install
 
 ```bash
 
-$ parcel index.html
+$ npm run dev
 
 ```
 
